@@ -22,7 +22,7 @@ def normalized_cross_correlation(
     t1 = patch1 - p1m
     t2 = patch2 - p2m
     num = 1 / N * np.sum(t1 * t2)
-    denom = np.std(patch1) * np.std(patch2)
+    denom = np.std(patch1) * np.std(patch2) + 1e-7
 
     return -num / denom
 
